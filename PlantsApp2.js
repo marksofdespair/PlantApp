@@ -134,7 +134,7 @@ if (false) {
   //help what was I writing :D
   //This function will check if the current plant has been watered but I'm not sure what the array is for???????? HELP
   //Loop that pushes an update to the shit above? idk what any of that was though
-  function checkWaterStat() {
+  /*function checkWaterStat() {
     
   }
   function waterAss() {
@@ -151,6 +151,20 @@ if (false) {
   function runProgram() {
     userName = askForName();
     console.log(`Hello ${userName}! Let's check in on your plants today.`);
+  }*/
+
+  function promptUserForPlantData() {
+    const Plant = plantInfoClasses; // Get the Plant class from the imported module
+    const scienceName = input.question('Enter the scientific name: ');
+    const commonName = input.question('Enter the common name: ');
+    const lightRequire = input.question('Enter the light requirements: ');
+    const waterStat = input.question('Enter the water status: ');
+    const potDesc = input.question('Enter pot description: ');
+  
+    const newPlant = new Plant(scienceName, commonName, lightRequire, waterStat, potDesc);
+    console.log('Plant information:', newPlant);
   }
 
-  runProgram();
+  function runProgram() {
+    promptUserForPlantData();
+  };

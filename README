@@ -1,0 +1,13 @@
+this is where I'll be writing notes for the code because I'm forgetful and easily lose track of larger goals.
+
+PLANT MODULE
+-class
+-should retain scientific name
+-should retain common name
+-should retain custom name
+-should retain light requirement
+-should retain updateable waterstat
+-should retain pot description
+
+WATER VALUE
+-Updates Waterstat by +1 points every day.
