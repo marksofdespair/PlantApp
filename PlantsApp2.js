@@ -1,12 +1,13 @@
 const input = require('readline-sync');
 //let inquireUsername = input.question("What is your name?: ");
-const plantInfoClasses = require('./Plant Modules/plant-classes');
+const Plant = require('./Plant Modules/plant-classes');
 
-var userName = ""
+
+var userName = "gardner"
 function askForName() {
-    const name = input.question("Input your name: ");
-    return name;
-  }
+  const name = input.question("Input your name: ");
+  return name;
+}
 
 function displayDay(){
     var dayOfWeekName = new Date().toLocaleString(
@@ -64,7 +65,7 @@ function dayInfo(dayOfWeekName, userName) {
     } else if (dayOfWeekName === 'Wednesday') {
       console.log("It's Wednesday! Time to fertilize.");
     } else {
-      console.log(`You do not need to water the plants or fertilize on ${dayOfWeekName}, ${userName}.`);
+      console.log(`You do not need to water the plants or fertilize on ${dayOfWeekName}. Good job, ${userName}.`);
     }
   
     if (dayOfWeekName === 'Sunday' || dayOfWeekName === 'Friday') {
@@ -86,12 +87,12 @@ function dayInfo(dayOfWeekName, userName) {
 
 //Need LOGICAL OPERATORS
 
-let plant1 = new Plant ("Asparagus setaceus", "Asparagus Fern", "High", null, potDescription);
-let plant2 = new Plant ("Haworthiopsis attenuata", "Zebra Hawthorn", "High", null, potDescription);
-let plant3 = new Plant ("Ravenea rivularis", "Majesty Palm", "High", null, potDescription);
-let plant4 = new Plant ("Davallia fejeensis", "Rabbit\'s Foot Fern", "Medium", null, potDescription);
-let plant5 = new Plant ("Davallia fejeensis", "Rabbit\'s Foot Fern", "Medium", null, potDescription);
-let plant6 = new Plant ("Unknown Wood Fern", "Unknown Wood Fern", "Medium", null, potDescription);
+let plant1 = new Plant ("Asparagus setaceus", "Asparagus Fern", "High", null, null);
+let plant2 = new Plant ("Haworthiopsis attenuata", "Zebra Hawthorn", "High", null, null);
+let plant3 = new Plant ("Ravenea rivularis", "Majesty Palm", "High", null, null);
+let plant4 = new Plant ("Davallia fejeensis", "Rabbit\'s Foot Fern", "Medium", null, null);
+let plant5 = new Plant ("Davallia fejeensis", "Rabbit\'s Foot Fern", "Medium", null, null);
+let plant6 = new Plant ("Unknown Wood Fern", "Unknown Wood Fern", "Medium", null, null);
 
 //REFACTORING AS OBJECTS
 /*let bluePot = 'fern'
@@ -154,17 +155,37 @@ if (false) {
   }*/
 
   function promptUserForPlantData() {
-    const Plant = plantInfoClasses; // Get the Plant class from the imported module
     const scienceName = input.question('Enter the scientific name: ');
     const commonName = input.question('Enter the common name: ');
+    const customName = input.question('Enter a custom name: ');
     const lightRequire = input.question('Enter the light requirements: ');
     const waterStat = input.question('Enter the water status: ');
     const potDesc = input.question('Enter pot description: ');
   
-    const newPlant = new Plant(scienceName, commonName, lightRequire, waterStat, potDesc);
+    const newPlant = new Plant(scienceName, commonName, customName, lightRequire, waterStat, potDesc);
     console.log('Plant information:', newPlant);
   }
 
-  function runProgram() {
-    promptUserForPlantData();
-  };
+function runProgram() {
+    const userName = askForName(); // Set the userName
+  
+    console.log(`Hello ${userName}! Let's check in on your plants today.`);
+  
+    const dayOfWeekName = displayDay();
+    getSeason();
+    dayInfo(dayOfWeekName, userName);
+    console.log('');
+  
+    while (true) {
+      const answer = input.question('Do you want to add a new plant? (yes/no): ');
+      if (answer.toLowerCase() === 'no') {
+        break; // Exit the loop if the user enters 'no'
+      } else if (answer.toLowerCase() === 'yes') {
+        promptUserForPlantData(); // Call the plant data prompt function
+      } else {
+        console.log('Please enter "yes" or "no".');
+      }
+    }
+  }
+
+  runProgram();

@@ -1,8 +1,8 @@
 class Plant {
-    constructor(scienceName = null, commonName = null, lightRequire = null, waterStat = null, potDesc = null){
+    constructor(scienceName = null, commonName = null, customName = null, lightRequire = null, waterStat = null, potDesc = null){
         this.scienceName = scienceName;
         this.commonName = commonName;
-        this.customName = customName
+        this.customName = customName;
         this.lightRequire = lightRequire;
         this.waterStat = waterStat;
         this.potDesc = potDesc;
