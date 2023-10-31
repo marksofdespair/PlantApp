@@ -4,6 +4,7 @@ const Plant = require('./Plant Modules/plant-classes');
 
 
 var userName = "gardner"
+
 function askForName() {
   const name = input.question("Input your name: ");
   return name;
@@ -14,30 +15,6 @@ function displayDay(){
     'default', {weekday: 'long'}
     );
 }
-
-displayDay();
-/*const getSeason = month => {
-
- 
-1- Jan    | 7 - July
-2- Feb    | 8 - August
-3- March  | 9 - September
-4- April  | 10 - October
-5- May    | 11 - November
-6- June   | 12 - December
-
-  if (3 >= month && month <= 5) {
-    console.log('spring');
-  } else if (6 <= month && month <= 8) { 
-    console.log('summer');
-  } else if (9 <= month && month <= 11) {
-    console.log('autumn');
-  } else if (12 === month && month <= 2) {
-  console.log('winter');
-  } else {
-    console.log("Unable to retrieve season.");
-  }
-}*/
 
 function getSeason(){
   const currentDate = new Date();
@@ -102,34 +79,7 @@ if (true) {
   } else {
     console.log(`The ${bluePot} does not need watering!`)
   };
-let greenPot = 'Asparagus fern'
-var doesPlantNeedWater2 = true || false
-if (true) {
-  console.log(`The ${greenPot} still needs watering.`)
-  } else {
-  console.log(`The ${greenPot} does not need watering!`)
-  };
-let greenPotTwo = 'Fairy Fern'
-var doesPlantNeedWater3 = true || false
-if (true) {
-  console.log(`The ${greenPotTwo} still needs watering.`)
-  } else {
-  console.log(`The ${greenPotTwo} does not need watering!`)
-  };
-let whitePot = 'Rabbit Fern'
-var doesPlantNeedWater4 = true || false
-if (false) {
-  console.log(`The ${whitePot} still needs watering.`)
-  } else {
-  console.log(`The ${whitePot} does not need watering!`)
-  };
-let beigePot = 'Palm Tree'
-var doesPlantNeedWater5 = true || false
-if (false) {
-  console.log(`The ${beigePot} still needs watering.`)
-  } else {
-  console.log(`The ${beigePot} does not need watering!`)
-  };
+leaving this here for concept's sake
   */
 
   //help what was I writing :D
