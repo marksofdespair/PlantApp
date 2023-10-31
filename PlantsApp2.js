@@ -1,7 +1,7 @@
 const input = require('readline-sync');
 //let inquireUsername = input.question("What is your name?: ");
 const Plant = require('./Plant Modules/plant-classes');
-
+const Name = require('./Plant Modules/request-name-func');
 
 var userName = "gardner"
 

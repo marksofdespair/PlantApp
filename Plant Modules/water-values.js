@@ -1,4 +1,5 @@
 //function that updates water value
+
 let waterStat = 0;
 let lastWateredDay = new Date().getDay(); // Initialize with the current day of the week
 
@@ -23,3 +24,4 @@ function updateWaterStat() {
 setInterval(updateWaterStat, 60 * 60 * 1000); // Update every hour
 
 //export water update function here
+module.exports = updateWaterStat

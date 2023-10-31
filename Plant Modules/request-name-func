@@ -1,0 +1,6 @@
+function askForName() {
+  const name = input.question("Input your name: ");
+  return name;
+}
+
+module.export = askForName
