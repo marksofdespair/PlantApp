@@ -29,3 +29,8 @@ body {
 .subtitle {
     text-align: center;
 }
+
+
+#addPlantSection {
+    display: none;
+}

@@ -1,16 +1,69 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Plant App</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="script.js"></script>
 </head>
 <body>
     <div class="header">
         <h1 class="title">Plant Hoarder App</h1>
     </div>
+
+    <form id="nameForm">
+        <label for="name">Enter your name:</label>
+        <input type="text" id="name" name="name">
+        <button type="submit">Submit</button>
+    </form>
+    <p id="Name added."></p>
+
     <div class="container">
         <h2 class="subtitle">Current Plants</h2>
         <!-- Your content goes here -->
     </div>
+
+    <section id="addPlantSection">
+        <h2>Add a New Plant</h2>
+        <form id="plantForm">
+            <label for="scienceName">Scientific Name:</label>
+            <input type="text" id="scienceName" name="scienceName">
+            <br>
+
+            <label for="commonName">Common Name:</label>
+            <input type="text" id="commonName" name="commonName">
+            <br>
+
+            <label for="customName">Custom Name:</label>
+            <input type text id="customName" name="customName">
+            <br>
+
+            <label for="lightRequire">Light Requirements:</label>
+            <input type="text" id="lightRequire" name="lightRequire">
+            <br>
+
+            <label for="waterStat">Water Status:</label>
+            <input type="text" id="waterStat" name="waterStat"> <!-- Added waterStat input -->
+            <br>
+
+            <label for="potDesc">Pot Description:</label>
+            <input type="text" id="potDesc" name="potDesc">
+            <br>
+
+            <button type="submit">Add Plant</button>
+        </form>
+    </section>
+
+    <section id="plantListSection">
+        <h2>Plant List</h2>
+        <ul id="plantList">
+            <!-- Plant items will be added here -->
+        </ul>
+    </section>
+
+    <!-- Add an element to display plant information -->
+    <p id="plantInfo"></p>
+
+    <button id="addPlantButton">Add a Plant</button>
+    <button id="showPlantListButton">Show Plant List</button>
 </body>
 </html>
