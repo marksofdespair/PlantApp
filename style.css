@@ -18,14 +18,27 @@ header {
 #addPlantSection {
     display: none;
     background-color: #bd9e6d;
-    padding-left: 15px;
+    padding-left: 20px;
     padding-right: 15px;
-    padding-top: 15px;
+    padding-top: 5px;
     padding-bottom: 15px;
-    margin-left: 200px;
-    margin-right: 400px;
+    margin-left: 100px;
+    margin-right: 900px;
     border: 2px solid black;
-    border-radius: 2px;
+    border-radius: 8px;
+}
+
+#addPlant {
+    margin-top: 20px;
+    margin-left: 770px;
+}
+
+button {
+    background-color: #aaf2f6;
+    border: none;
+    border-radius: 8px;
+    color:#94654f;
+    padding: 10px 20px;
 }
 
 body {

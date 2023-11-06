@@ -8,6 +8,10 @@ PLANT MODULE
 -should retain light requirement
 -should retain updateable waterstat
 -should retain pot description
+!jk this got scrapped real fast as a module :')
 
 WATER VALUE
 -Updates Waterstat by +1 points every day.
+
+ADD
+-Feedback for when a plant is added succesfully. Oh no. Does that require I write a throw/catch? Well shit.
