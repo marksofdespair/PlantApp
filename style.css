@@ -1,36 +1,44 @@
-body {
-    margin: 0;
-    padding: 0;
-    background-color: lightgreen;
-    font-family: Arial, sans-serif;
+/*CSS Style here*/
+header {
+    background-color: #aaf2f6;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    border-bottom: 2px solid black;
 }
 
-.header {
-    text-align: center;
-    padding: 20px;
-    background-color: lightgreen;
-    position: relative;
+#nameForm {
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
-
-.title {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-}
-
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: white;
-}
-
-.subtitle {
-    text-align: center;
-}
-
 
 #addPlantSection {
     display: none;
+    background-color: #bd9e6d;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-left: 200px;
+    margin-right: 400px;
+    border: 2px solid black;
+    border-radius: 2px;
+}
+
+body {
+    background-color: #94654f;
+}
+
+footer {
+    background-color: #aaf2f6;
+    border-top: 2px solid black;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
 }

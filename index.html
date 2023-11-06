@@ -2,14 +2,11 @@
 <html>
 <head>
     <title>Plant App</title>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <script src="script.js"></script>
 </head>
 <body>
-    <div class="header">
-        <h1 class="title">Plant Hoarder App</h1>
-    </div>
-
+    <header id="plantHeader"><h2 id="plantText"><img src="PlantImages/planthoardericontemp.png" width="50" height="60">The Plant Hoarder</h3></header>
     <form id="nameForm">
         <label for="name">Enter your name:</label>
         <input type="text" id="name" name="name">
@@ -26,27 +23,32 @@
         <h2>Add a New Plant</h2>
         <form id="plantForm">
             <label for="scienceName">Scientific Name:</label>
-            <input type="text" id="scienceName" name="scienceName">
+            <input placeholder="Sciency Name Here!" type="text" id="scienceName" name="scienceName">
             <br>
 
             <label for="commonName">Common Name:</label>
-            <input type="text" id="commonName" name="commonName">
+            <input placeholder="Common Name Here!" text="text" id="commonName" name="commonName">
             <br>
 
             <label for="customName">Custom Name:</label>
-            <input type text id="customName" name="customName">
+            <input placeholder="Name Your Plant!" type text id="customName" name="customName">
             <br>
 
-            <label for="lightRequire">Light Requirements:</label>
-            <input type="text" id="lightRequire" name="lightRequire">
+            <label for="lightRequire">Light Requirement: 
+            <input type="radio" id="lightReqLow" name="lightRequire" value="Low">
+            <label for="Low">Low</label>
+            <input type="radio" id="lightReqMed" name="lightRequire" value="Medium">
+            <label for="Medium">Medium</label>
+            <input type="radio" id="lightReqHigh" name="lightRequire" value="High">
+            <label for="High">High</label></label>
             <br>
 
-            <label for="waterStat">Water Status:</label>
-            <input type="text" id="waterStat" name="waterStat"> <!-- Added waterStat input -->
-            <br>
+            <!-- <label for="waterStat">Water Status:</label>
+            <input type="text" id="waterStat" name="waterStat"> Added waterStat input
+            <br> -->
 
             <label for="potDesc">Pot Description:</label>
-            <input type="text" id="potDesc" name="potDesc">
+            <input placeholder="Blue with brown swirls..." type="text" id="potDesc" name="potDesc">
             <br>
 
             <button type="submit">Add Plant</button>
@@ -57,6 +59,8 @@
         <h2>Plant List</h2>
         <ul id="plantList">
             <!-- Plant items will be added here -->
+            <p>PlaceHolder Fern</p>
+            <p>PlaceHolder Succulent</p>
         </ul>
     </section>
 
@@ -65,5 +69,8 @@
 
     <button id="addPlantButton">Add a Plant</button>
     <button id="showPlantListButton">Show Plant List</button>
+    <br>
+    <br>
+    <footer id="copyNotice">Copyright &copy; Habitual Nightmare</footer>
 </body>
 </html>
