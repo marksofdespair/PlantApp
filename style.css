@@ -10,6 +10,19 @@ header {
     border-bottom: 2px solid black;
 }
 
+.column {
+    float: left;
+    width: 30%;
+    padding: 10px 12px;
+}
+  
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 #nameForm {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -18,19 +31,29 @@ header {
 #addPlantSection {
     display: none;
     background-color: #bd9e6d;
-    padding-left: 20px;
-    padding-right: 15px;
-    padding-top: 5px;
-    padding-bottom: 15px;
+    padding: 10px 12px;
     margin-left: 100px;
-    margin-right: 900px;
     border: 2px solid black;
     border-radius: 8px;
 }
 
 #addPlant {
     margin-top: 20px;
-    margin-left: 770px;
+}
+
+#waterCalc {
+    background-color: #bd9e6d;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 10px 12px;
+    float: right;
+}
+
+#plantListSection {
+    background-color: #bd9e6d;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 10px 12px;
 }
 
 button {

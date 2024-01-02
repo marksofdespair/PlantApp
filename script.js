@@ -1,5 +1,3 @@
-// Add this code at the beginning of your JavaScript file
-
 window.addEventListener('DOMContentLoaded', function () {
     // This code runs when the page content is loaded
 
@@ -8,6 +6,8 @@ window.addEventListener('DOMContentLoaded', function () {
     const nameForm = document.getElementById('nameForm');
     const nameInput = document.getElementById('name');
     const outputMessage = document.getElementById('outputMessage');
+    const monthDisplay = document.getElementById('monthDisplay');
+    const waterRequirementsDisplay = document.getElementById('waterRequirementsDisplay');
 
     // Hide the "Add a New Plant" section initially
     addPlantSection.style.display = 'none';
@@ -33,10 +33,39 @@ window.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+    // Function to get the current month
+    function getCurrentMonth() {
+        const currentDate = new Date();
+        const options = { month: 'long', year: 'numeric' };
+        return currentDate.toLocaleDateString(undefined, options);
+    }
+
+    // Function to determine water requirements based on the current month
+    function getWaterRequirements(month) {
+        if (month >= 3 && month <= 5) {
+            return 'It\'s spring- consider checking the soil moisture once a week!';
+        } else if (month >= 6 && month <= 10) {
+            return 'It\'s summer- consider checking the soil moisture twice a week!';
+        } else {
+            return 'It\'s winter- consider checking the soil moisture every other week!';
+        }
+    }
+
+    // Function to update the month and water requirements display
+    function updateMonthAndWaterRequirements() {
+        const currentMonth = getCurrentMonth();
+        const waterRequirements = getWaterRequirements(currentMonth);
+
+        monthDisplay.textContent = `Current Date: ${currentMonth}`;
+        waterRequirementsDisplay.textContent = `Water Requirements: ${waterRequirements}`;
+    }
+
     nameForm.addEventListener('submit', function (event) {
         event.preventDefault();
         const name = nameInput.value;
         outputMessage.textContent = `Hello, ${name}`;
     });
+
+    updateMonthAndWaterRequirements();
 });
 

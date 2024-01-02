@@ -6,75 +6,83 @@
     <script src="script.js"></script>
 </head>
 <body>
-    <header id="plantHeader"><h2 id="plantText"><img src="PlantImages/planthoardericontemp.png" width="50" height="60">The Plant Hoarder</h3></header>
-    <form id="nameForm">
-        <label for="name">Enter your name:</label>
-        <input type="text" id="name" name="name">
-        <button type="submit">Submit</button>
-    </form>
-    <p id="Name added."></p>
-
-    <div class="container">
-        <h2 class="subtitle">Current Plants</h2>
-        <!-- Your content goes here -->
-    </div>
-
-    <section id="addPlantSection">
-        <h2>Add a New Plant!</h2>
-        <form id="plantForm">
-            <label for="scienceName">Scientific Name:</label>
-            <input placeholder="Sciency Name Here!" type="text" id="scienceName" name="scienceName">
-            <br>
-            <br>
-
-            <label for="commonName">Common Name:</label>
-            <input placeholder="Common Name Here!" text="text" id="commonName" name="commonName">
-            <br>
-            <br>
-
-            <label for="customName">Custom Name:</label>
-            <input placeholder="Name Your Plant!" type text id="customName" name="customName">
-            <br>
-            <br>
-
-            <label for="lightRequire">Light Requirement: 
-            <input type="radio" id="lightReqLow" name="lightRequire" value="Low">
-            <label for="Low">Low</label>
-            <input type="radio" id="lightReqMed" name="lightRequire" value="Medium">
-            <label for="Medium">Medium</label>
-            <input type="radio" id="lightReqHigh" name="lightRequire" value="High">
-            <label for="High">High</label></label>
-            <br>
-            <br>
-
-            <!-- <label for="waterStat">Water Status:</label>
-            <input type="text" id="waterStat" name="waterStat"> Added waterStat input
-            <br> -->
-
-            <label for="potDesc">Pot Description:</label>
-            <input placeholder="Blue with brown swirls..." type="text" id="potDesc" name="potDesc">
-            <br>
-
-            <button id="addPlant" type="submit">Add Plant</button>
+    <header id="plantHeader"><h2 id="plantText"><img src="PlantImages/plant hoarder icon.png" width="50" height="60">The Plant Hoarder</h3></header>
+        <form id="nameForm">
+            <label for="name">Enter your name:</label>
+            <input type="text" id="name" name="name">
+            <button type="submit">Submit</button>
         </form>
-    </section>
+        <p id="Name added."></p>
+        </div>
 
-    <section id="plantListSection">
-        <h2>Plant List</h2>
-        <ul id="plantList">
-            <!-- Plant items will be added here -->
-            <p>PlaceHolder Fern</p>
-            <p>PlaceHolder Succulent</p>
-        </ul>
-    </section>
+        <div class="container">
+            <h2 class="subtitle">Current Plants</h2>
+            <!-- Your content goes here -->
+        </div>
 
-    <!-- Add an element to display plant information -->
-    <p id="plantInfo"></p>
+        <div class="row">
+            <div class="column">
+                <section id="addPlantSection">
+                    <h2>Add a New Plant!</h2>
+                    <form id="plantForm">
+                        <label for="scienceName">Scientific Name:</label>
+                        <input placeholder="Sciency Name Here!" type="text" id="scienceName" name="scienceName">
+                        <br>
+                        <br>
 
-    <button id="addPlantButton">Add a Plant</button>
-    <button id="showPlantListButton">Show Plant List</button>
+                        <label for="commonName">Common Name:</label>
+                        <input placeholder="Common Name Here!" text="text" id="commonName" name="commonName">
+                        <br>
+                        <br>
+
+                        <label for="customName">Custom Name:</label>
+                        <input placeholder="Name Your Plant!" type text id="customName" name="customName">
+                        <br>
+                        <br>
+
+                        <label for="lightRequire">Light Requirement: 
+                        <input type="radio" id="lightReqLow" name="lightRequire" value="Low">
+                        <label for="Low">Low</label>
+                        <input type="radio" id="lightReqMed" name="lightRequire" value="Medium">
+                        <label for="Medium">Medium</label>
+                        <input type="radio" id="lightReqHigh" name="lightRequire" value="High">
+                        <label for="High">High</label></label>
+                        <br>
+                        <br>
+                        <label for="potDesc">Pot Description:</label>
+                        <input placeholder="Blue with brown swirls..." type="text" id="potDesc" name="potDesc">
+                        <br>
+
+                        <button id="addPlant" type="submit">Add Plant</button>
+                    </form>
+                </section>
+            </div>
+            <div class="column">
+                <section id="waterCalc"> <!-- Season Water Calculator -->
+                    <h2>Water Information</h2>
+                    <p id="monthDisplay"></p>
+                    <p id="waterRequirementsDisplay"></p>
+                </section>
+            </div>
+            <div class="column">
+                <section id="plantListSection">
+                    <h2>Plant List</h2>
+                    <ul id="plantList">
+                        <!-- Plant items will be added here -->
+                        <p>PlaceHolder Fern</p>
+                        <p>PlaceHolder Succulent</p>
+                    </ul>
+                </section>
+            </div>
+        </div>
+
+                <!-- Add an element to display plant information -->
+                <p id="plantInfo"></p>
+
+                <button id="addPlantButton">Add a Plant</button>
+                <button id="showPlantListButton">Show Plant List</button>
     <br>
     <br>
-    <footer id="copyNotice">Copyright &copy; Habitual Nightmare</footer>
+    <footer id="copyNotice">Copyright &copy; Nightmare Panthera</footer>
 </body>
 </html>
